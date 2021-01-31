@@ -1,12 +1,52 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% for user in users %}
-<tr>
-    <td data-label="Profile Pic"><img src="{{ user.img_url }}" class="profile-pic"></td>
-    <td data-label="Id">{{ user.id }}</td>
-    <td data-label="Username">{{ user.username }}</td>
-    <td data-label="Type">{{ user.user_type }}</td>
-</tr>
-{% endfor %}
+<div class="table-menu">
+  <div class="table-menu-title">
+    Page 1
+  </div>
+
+  <div class="table-menu-title">
+    25 rows/page
+  </div>
+
+  <div class="table-menu-title page-controller">
+    <button>Prev</button>
+    <button>Next</button>
+  </div>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th scope="col">Profile Pic</th>
+            <th scope="col">Id</th>
+            <th scope="col">Username</th>
+            <th scope="col">Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+        <tr>
+            <td data-label="Profile Pic"><img src="{{ user.img_url }}" class="profile-pic"></td>
+            <td data-label="Id">{{ user.id }}</td>
+            <td data-label="Username"><a target="_blank" href="{{ user.profile_url }}">{{ user.username }}</a></td>
+            <td data-label="Type">{{ user.user_type }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<div class="table-menu">
+  <div class="table-menu-title">
+    Page 1
+  </div>
+
+  <div class="table-menu-title">
+    25 rows/page
+  </div>
+
+  <div class="table-menu-title page-controller">
+    <button>Prev</button>
+    <button>Next</button>
+  </div>
+</div>
 {% endblock %}

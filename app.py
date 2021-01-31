@@ -13,7 +13,14 @@ def index():
 
 @app.route("/profiles", methods=["GET"])
 def profiles():
-    raw_users = session.query(GitHubUserOrm).all()
+    rows_per_page = 25
+    page_number = 1
+    raw_users = (
+        session.query(GitHubUserOrm)
+        .limit(rows_per_page)
+        .offset((page_number - 1) * rows_per_page)
+        .all()
+    )
     users = [GitHubUser.from_orm(user).dict() for user in raw_users]
     return render_template("profiles.html", users=users)
 

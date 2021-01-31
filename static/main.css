@@ -24,6 +24,19 @@ table tr {
     padding: .35em;
 }
 
+tr:nth-child(even) {
+  background: hsl(201, 100%, 95%);
+}
+
+tr:nth-child(odd) {
+  background: hsl(201, 100%, 90%);
+}
+
+.header {
+  background: hsl(201, 100%, 22%) !important;
+  color: hsl(201, 100%, 94%);
+}
+
 table th,
 table td {
     padding: .625em;
@@ -85,17 +98,15 @@ table th {
     }
 }
 
-caption {
-    color: hsl(201, 100%, 94%);
-}
-
 main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: hsl(201, 100%, 86%);
     width: 100vw;
     min-height: 100vh;
+    padding-bottom: 90vh;
 }
 
 .profile-pic {
@@ -110,4 +121,35 @@ main {
     border-radius: 12px;
     -webkit-box-shadow: 5px 6px 25px 0px rgba(0, 40, 61, 0.43);
     box-shadow: 5px 6px 25px 0px rgba(0, 40, 61, 0.43);
+}
+
+.instructions {
+    margin-top: 5vh;
+    background: hsl(201, 100%, 86%);
+    color: hsl(201, 100%, 12%);
+    box-shadow: none;
+    font-size: 20px;
+}
+
+.table-menu {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 16px 0;
+    flex-wrap: wrap;
+}
+
+.table-menu-title {
+    font-size: 1.5em;
+    color: hsl(201, 100%, 94%);
+    margin: 12px 10px 12px 0;
+}
+
+.page-controller>button {
+    margin-right: 16px;
+}
+
+.page-controller {
+    /* flex: 8; */
+    display: flex;
 }
