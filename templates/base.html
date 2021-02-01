@@ -50,14 +50,18 @@
 
         <div class="wrapper instructions">
             <h1>GitHub Users</h1>
+            <h3>
+              Modify the URL params to modify the results
+            </h3>
             <p>
-                This webpage shows the first N users registered on GitHub. You can see each of the pages by clicking next or prev respectively.
+              This webpage shows the first N users registered on GitHub. You can see each of the pages by clicking next or prev respectively.
             </p>
         </div>
         <div class="wrapper">
             {% block content %}{% endblock %}
         </div>
     </main>
+    <script src="{{ url_for('static', filename='main.js' ) }}"></script>
 </body>
 
 </html>

@@ -3,16 +3,16 @@
 {% block content %}
 <div class="table-menu">
   <div class="table-menu-title">
-    Page 1
+    Page {{ page_number }}
   </div>
 
   <div class="table-menu-title">
-    25 rows/page
+    {{ rows_per_page }} rows/page
   </div>
 
   <div class="table-menu-title page-controller">
-    <button>Prev</button>
-    <button>Next</button>
+    <button name="btn-prev">Prev</button>
+    <button name="btn-next">Next</button>
   </div>
 </div>
 <table>
@@ -37,16 +37,16 @@
 </table>
 <div class="table-menu">
   <div class="table-menu-title">
-    Page 1
+    Page {{ page_number }}
   </div>
 
   <div class="table-menu-title">
-    25 rows/page
+    {{ rows_per_page }} rows/page
   </div>
 
   <div class="table-menu-title page-controller">
-    <button>Prev</button>
-    <button>Next</button>
+    <button name="btn-prev">Prev</button>
+    <button name="btn-next">Next</button>
   </div>
 </div>
 {% endblock %}
