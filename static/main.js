@@ -3,8 +3,6 @@ const getClick = (goForward = true) => () => {
   const rows = +urlParams.get("rows") || 25;
   const page = +urlParams.get("page") || 1;
 
-  console.log(rows, page);
-
   const actualPage = window.location.href;
   const newPageBase = actualPage.split("profiles")[0];
 
@@ -16,7 +14,6 @@ const getClick = (goForward = true) => () => {
 };
 
 const prevBtns = document.getElementsByName("btn-prev");
-console.log(prevBtns);
 prevBtns.forEach((btn) => btn.addEventListener("click", getClick(false)));
 
 const nextBtns = document.getElementsByName("btn-next");
