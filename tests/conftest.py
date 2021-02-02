@@ -10,7 +10,6 @@ def pytest_sessionstart():
     users = UserFactory.build_batch(mock_users)
     for user in users:
         session.add(user)
-        print(user)
 
     session.commit()
     print("Test DB initialized")

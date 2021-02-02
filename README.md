@@ -1,4 +1,8 @@
-# Python Test
+# Flask Demo Project
+
+This is my solution to the following scenario.
+
+## Initial Instructions
 
 Using the [API of GitHub](https://docs.github.com/en/free-pro-team@latest/rest/reference) do the following tasks:
 
@@ -20,7 +24,7 @@ Create an script to run your server and a `README.md` file where you explain you
 
 After completion of the tasks create a public repository and put all the code there. Be sure to not include compiled files and the db.
 
-### Optional
+**Optional**
 
 - Add an endpoint where you return a JSON with the information stored in the database. The user will be able to use query params to filter the results. At least there should be for username and id but for type, pagination size, order by and GitHub profile is a plus. Example:
 
