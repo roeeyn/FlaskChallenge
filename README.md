@@ -76,12 +76,12 @@ Inside the function `create_connection` I create a useful connection to the DB, 
 
 Using the GitHub API, I fetch GitHub users with the function `get_github_users` by calculating the pagination and remainder, because the API has a maximum of 100 per page, so if we need more than that I do several requests and then just collect all the data in a single list.
 
-***Caveats***: I know that if we fetch A LOT of users all the memory would be consumed by the users list, so in that case we would need to be processing the users as they arrive (maybe asynchronously with a queue), but for the simplicity of the exercise, I left it as this. Also, I didn't create any unit testing for the seeding script as it exists only for the purpose for the example and probably would not exist in a real world project. For that I would use some other approach such as migrations.
-
 ##### 3. Save GitHub Users
 
 With the list created in the previous step, I iterate and for each element, parse it (rename keys and delete the unused ones) and do a insertion to the DB.
 At the end I will have my DB file with all the fetched users 😊
+
+***Caveats***: I know that if we fetch A LOT of users all the memory would be consumed by the users list, so in that case we would need to be processing the users as they arrive (maybe asynchronously with a queue), but for the simplicity of the exercise, I left it as this. Also, I didn't create any unit testing for the seeding script as it exists only for the purpose for the example and probably would not exist in a real world project. For that I would use some other approach such as migrations. Also we could get the total number for the seeding from the stdin, but as you're going to execute a python script that initializes a database, I may infer that you know what you're doing and that you're able to change a number within the script.
 
 ### View
 
