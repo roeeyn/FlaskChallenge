@@ -163,7 +163,9 @@ You are seeing it 😆
 I achieved this by creating the route `/api/profiles?rows=25&page=4`, which will return the same info, but in JSON format. The only params you can modify are rows and page.
 
 > - Deploy your app to a Heroku server or any other free option and include the link in the email
+
 👉🏼 https://roeeyn-flask-tutorial.herokuapp.com/profiles
 
 > - Include as many optimizations as you can (e.g cache)
+
 For the simplicity of the exercise, I did not include a external cache as it would need an extra server, or even cluster (Redis is the best in my opinion). This would optimize for sure the response time as our system is *read heavy* and zero writing. I did not consider using internal cache such as memoizing as I feel it as "cheating" as the DB will never change (it's seeded with the GitHub API) and in that case it would be better to just initialize a dict from a file instead of using the DB itself but that would break the exercise.
