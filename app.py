@@ -6,12 +6,14 @@ app = Flask(__name__)
 
 @app.route("/ping")
 @app.route("/index")
+@app.route("/")
 def index():
     # Health Check
-    return "Hello, World!"
+    # a http 304 with a redirect would be useful here
+    return "Hello, World! I think you're looking for /profiles"
 
 
-@app.route("/", methods=["GET"])
+@app.route("/profiles", methods=["GET"])
 def profiles():
     rows_per_page_arg = int(request.args.get("rows", 25))
     page_number_arg = int(request.args.get("page", 1))
