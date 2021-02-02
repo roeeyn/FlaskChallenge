@@ -1,6 +1,8 @@
 # Flask Demo Project
 
-This is my solution to the following scenario.
+![Sample](https://media.giphy.com/media/pgfgG19ODFycDtnhO9/giphy.gif)
+
+This is my solution to the following scenario. You can see it live [here](https://roeeyn-flask-tutorial.herokuapp.com/profiles)
 
 ## Initial Instructions
 
