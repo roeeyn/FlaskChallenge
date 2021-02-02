@@ -6,7 +6,7 @@ This is my solution to the following scenario.
 
 Using the [API of GitHub](https://docs.github.com/en/free-pro-team@latest/rest/reference) do the following tasks:
 
-- Create a script called `[seed.py](http://seed.py)` that populates a SQLite database. By default it should search for the first 150 users from GitHub but the script should accept a param called `total` to customize the number of users.
+- Create a script called `seed.py` that populates a SQLite database. By default it should search for the first 150 users from GitHub but the script should accept a param called `total` to customize the number of users.
 - The fields required for this users are:
     - username
     - id
