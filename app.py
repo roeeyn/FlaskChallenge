@@ -4,13 +4,14 @@ from src.users import get_paginated_users
 app = Flask(__name__)
 
 
-@app.route("/")
+@app.route("/ping")
 @app.route("/index")
 def index():
+    # Health Check
     return "Hello, World!"
 
 
-@app.route("/profiles", methods=["GET"])
+@app.route("/", methods=["GET"])
 def profiles():
     rows_per_page_arg = int(request.args.get("rows", 25))
     page_number_arg = int(request.args.get("page", 1))

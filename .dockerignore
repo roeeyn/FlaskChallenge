@@ -1,0 +1,8 @@
+*.pyc
+.pytest_cache/
+factories/
+tests/
+__pycache__/
+seed_requirements.txt
+seed.py
+README.md
